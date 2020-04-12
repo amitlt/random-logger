@@ -2,14 +2,14 @@
 
 Docker image for a random log generator, based on Alpine Linux.
 
-[![](https://images.microbadger.com/badges/version/chentex/random-logger.svg)](https://microbadger.com/images/chentex/random-logger "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/chentex/random-logger.svg)](https://microbadger.com/images/chentex/random-logger "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/amitltotango/random-logger.svg)](https://microbadger.com/images/amitltotango/random-logger "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/amitltotango/random-logger.svg)](https://microbadger.com/images/amitltotango/random-logger "Get your own image badge on microbadger.com")
 
 ## What is this?
 
 This image will execute a container which will generate four random log messages:
 
-* `2018-03-02T22:33:27-06:00 ERROR something happened in this execution.`
+* `2018-03-02T22:33:27-06:00 ERROR something happened in this execution.` - to stderr
 * `2018-03-02T22:33:27-06:00 INFO takes the value and converts it to string.`
 * `2018-03-02T22:33:27-06:00 WARN variable not in use.`
 * `2018-03-02T22:33:27-06:00 DEBUG first loop completed.`
@@ -31,17 +31,17 @@ To use this image you must do as follows:
 
 ```bash
 # you can use tags latest
-docker pull chentex/random-logger:latest
+docker pull amitltotango/random-logger:latest
 
 # use different intervals to print logs every random(100, 400) milliseconds
-docker run chentex/random-logger:latest 100 400
+docker run amitltotango/random-logger:latest 100 400
 
 # use the third parameter so limit the number of loglines (after generating the lines the container will stop).
 # if not set it runs infinite
-docker run chentex/random-logger:latest 100 400 100
+docker run amitltotango/random-logger:latest 100 400 100
 
 # to run the image just execute
-docker run -d chentex/random-logger:latest
+docker run -d amitltotango/random-logger:latest
 ```
 
 You will have now a docker container running and generating log messages, locate it running:
@@ -58,7 +58,7 @@ docker logs <- container-id ->
 
 ## How do I build this images?
 
-First things first, you can find these docker images in `chentex/random-logger`
+First things first, you can find these docker images in `amitltotango/random-logger`
 but you can also build a specific version on your own, you only need:
 
 * docker
@@ -66,7 +66,7 @@ but you can also build a specific version on your own, you only need:
 
 Clone this repo
 
-`git clone https://github.com/chentex/random-logger.git`
+`git clone https://github.com/amitltotango/random-logger.git`
 
 Go to the folder in your terminal and type this:
 
@@ -87,4 +87,4 @@ docker build -f Dockerfile -t yourbase/yourname:version .
 
 For more on docker build reference to the [Documentation](https://docs.docker.com/engine/reference/commandline/build/)
 
-You can get the source from the image in the [Repository](https://github.com/chentex/random-logger)
+You can get the source from the image in the [Repository](https://github.com/amitltotango/random-logger)
